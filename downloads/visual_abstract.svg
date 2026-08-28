@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 812" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6b4ff0"/><stop offset="0.55" stop-color="#512feb"/><stop offset="1" stop-color="#3a1fc4"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#9aa1b4"/>
+    </marker>
+    <marker id="arrowdanger" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#c8352f"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="812" fill="#f6f7fb"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1200" height="96" fill="url(#indigo)"/>
+  <g transform="translate(40,26)">
+    <rect x="0" y="0" width="44" height="44" rx="11" fill="#ffffff" opacity="0.16"/>
+    <text x="22" y="30" text-anchor="middle" font-size="24" font-weight="800" fill="#fff">N</text>
+  </g>
+  <text>GSE332551 REANALYSIS</text>
+  <text x="100" y="72" font-size="26" font-weight="800" fill="#fff">RNA and small-RNA signatures in iPSC-derived microglia of Alzheimer's disease</text>
+
+  <!-- ===== INPUTS ===== -->
+  <text x="40" y="144" font-size="14" font-weight="800" letter-spacing="1.5" fill="#7a8296">STUDY</text>
+  <g transform="translate(40,158)">
+    <rect x="0" y="0" width="300" height="150" rx="14" fill="#fff" stroke="#e3e6ef"/>
+    <circle cx="46" cy="52" r="20" fill="#fbe7e6"/><text x="46" y="58" text-anchor="middle" font-size="18" font-weight="800" fill="#c8352f">AD</text>
+    <text x="80" y="48" font-size="17" font-weight="700" fill="#1a1d29">3 sporadic AD</text>
+    <text x="80" y="70" font-size="14" fill="#4a5163">iPSC-derived microglia</text>
+    <circle cx="46" cy="108" r="20" fill="#e3f6ee"/><text x="46" y="114" text-anchor="middle" font-size="17" font-weight="800" fill="#0f9d6b">CN</text>
+    <text x="80" y="104" font-size="17" font-weight="700" fill="#1a1d29">3 cognitively normal</text>
+    <text x="80" y="126" font-size="14" fill="#4a5163">age / sex matched · APOE3/3</text>
+  </g>
+
+  <g transform="translate(372,158)">
+    <rect x="0" y="0" width="300" height="150" rx="14" fill="#fff" stroke="#e3e6ef"/>
+    <text x="20" y="34" font-size="14" font-weight="800" fill="#7a8296">TWO ASSAYS</text>
+    <rect x="20" y="48" width="260" height="38" rx="9" fill="#ecebfe"/>
+    <text x="34" y="72" font-size="15" font-weight="700" fill="#3a1fc4">Total RNA-seq · 6 samples</text>
+    <rect x="20" y="96" width="260" height="38" rx="9" fill="#e0f2fb"/>
+    <text x="34" y="120" font-size="15" font-weight="700" fill="#2258a8">T4 PNK small-RNA-seq · 6 samples</text>
+  </g>
+
+  <!-- arrow to GEO -->
+  <line x1="672" y1="233" x2="720" y2="233" stroke="#9aa1b4" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(724,158)">
+    <rect x="0" y="0" width="436" height="150" rx="14" fill="#fff" stroke="#e3e6ef"/>
+    <text x="24" y="40" font-size="15" font-weight="800" fill="#7a8296">DEPOSITED COUNT MATRICES</text>
+    <text x="24" y="72" font-size="19" font-weight="800" fill="#1a1d29">GEO GSE332551</text>
+    <text x="24" y="100" font-size="14" fill="#4a5163">RNA-seq: 67,406 transcripts, 13,611 genes kept</text>
+    <text x="24" y="122" font-size="14" fill="#4a5163">sncRNA: 30,469 features, 1,467 kept</text>
+  </g>
+
+  <!-- ===== PIPELINE ===== -->
+  <text x="40" y="352" font-size="14" font-weight="800" letter-spacing="1.5" fill="#7a8296">REANALYSIS (DESeq2 v1.46)</text>
+  <g transform="translate(40,366)" font-size="14">
+    <!-- step 1 -->
+    <rect x="0" y="0" width="250" height="86" rx="12" fill="#fff" stroke="#e3e6ef"/>
+    <text x="18" y="28" font-size="12" font-weight="800" fill="#3a1fc4">STEP 1</text>
+    <text x="18" y="52" font-size="16" font-weight="700" fill="#1a1d29">DESeq2, AD vs CN</text>
+    <text x="18" y="72" fill="#4a5163">both assays, n = 3 / group</text>
+    <line x1="250" y1="43" x2="288" y2="43" stroke="#9aa1b4" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <!-- step 2 -->
+    <rect x="292" y="0" width="250" height="86" rx="12" fill="#fff" stroke="#e3e6ef"/>
+    <text x="310" y="28" font-size="12" font-weight="800" fill="#3a1fc4">STEP 2</text>
+    <text x="310" y="52" font-size="16" font-weight="700" fill="#1a1d29">QC diagnostics</text>
+    <text x="310" y="72" fill="#4a5163">size factors, correlation, PCA</text>
+    <line x1="542" y1="43" x2="580" y2="43" stroke="#c8352f" stroke-width="2.5" marker-end="url(#arrowdanger)"/>
+    <!-- step 3 (outlier) -->
+    <rect x="584" y="0" width="250" height="86" rx="12" fill="#fbe7e6" stroke="#c8352f"/>
+    <text x="602" y="28" font-size="12" font-weight="800" fill="#c8352f">FLAGGED</text>
+    <text x="602" y="52" font-size="16" font-weight="800" fill="#c8352f">R17_AD outlier</text>
+    <text x="602" y="72" font-size="13" fill="#8a2a25">3.7M reads · size factor 0.44</text>
+    <line x1="834" y1="43" x2="872" y2="43" stroke="#9aa1b4" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <!-- step 4 -->
+    <rect x="876" y="0" width="244" height="86" rx="12" fill="#ecebfe" stroke="#512feb"/>
+    <text x="894" y="28" font-size="12" font-weight="800" fill="#3a1fc4">STEP 4</text>
+    <text x="894" y="52" font-size="16" font-weight="700" fill="#3a1fc4">Exclude, re-run</text>
+    <text x="894" y="72" fill="#4a5163">LFC shrinkage, FDR</text>
+  </g>
+
+  <!-- ===== RESULTS ===== -->
+  <text x="40" y="516" font-size="14" font-weight="800" letter-spacing="1.5" fill="#7a8296">RESULTS</text>
+
+  <!-- RNA-seq results -->
+  <g transform="translate(40,530)">
+    <rect x="0" y="0" width="632" height="234" rx="14" fill="#fff" stroke="#e3e6ef"/>
+    <text x="24" y="36" font-size="17" font-weight="800" fill="#1a1d29">RNA-seq: outlier drove the inflated count</text>
+    <text x="24" y="60" font-size="13.5" fill="#4a5163">Keeping R17_AD gave 827 DEGs skewed 3.6:1 toward "up in AD".</text>
+    <text x="24" y="80" font-size="13.5" fill="#4a5163">Dropping it gives a balanced, FDR-backed list.</text>
+
+    <!-- stat tiles -->
+    <g transform="translate(24,100)">
+      <rect x="0" y="0" width="140" height="72" rx="10" fill="#f6f7fb" stroke="#e3e6ef"/>
+      <text x="70" y="38" text-anchor="middle" font-size="28" font-weight="800" fill="#3a1fc4">387</text>
+      <text x="70" y="58" text-anchor="middle" font-size="12" fill="#7a8296">exploratory DEGs</text>
+      <rect x="152" y="0" width="140" height="72" rx="10" fill="#f6f7fb" stroke="#e3e6ef"/>
+      <text x="222" y="38" text-anchor="middle" font-size="28" font-weight="800" fill="#3a1fc4">30</text>
+      <text x="222" y="58" text-anchor="middle" font-size="12" fill="#7a8296">FDR &lt; 0.05</text>
+      <rect x="304" y="0" width="140" height="72" rx="10" fill="#f6f7fb" stroke="#e3e6ef"/>
+      <text x="374" y="38" text-anchor="middle" font-size="28" font-weight="800" fill="#1a1d29">13</text>
+      <text x="374" y="58" text-anchor="middle" font-size="12" fill="#7a8296">high confidence</text>
+      <rect x="456" y="0" width="152" height="72" rx="10" fill="#f6f7fb" stroke="#e3e6ef"/>
+      <text x="532" y="34" text-anchor="middle" font-size="18" font-weight="800" fill="#1a1d29"><tspan fill="#d64525">134</tspan> / <tspan fill="#2f6db5">253</tspan></text>
+      <text x="532" y="58" text-anchor="middle" font-size="12" fill="#7a8296">up / down (balanced)</text>
+    </g>
+    <text x="24" y="206" font-size="13.5" fill="#4a5163">Marker directions recovered in full: <tspan font-weight="700" fill="#d64525">11/11 up</tspan>, <tspan font-weight="700" fill="#2f6db5">18/18 down</tspan>. Top gene PHLDA1.</text>
+  </g>
+
+  <!-- sncRNA results -->
+  <g transform="translate(688,530)">
+    <rect x="0" y="0" width="472" height="234" rx="14" fill="#fff" stroke="#e3e6ef"/>
+    <text x="24" y="36" font-size="17" font-weight="800" fill="#1a1d29">Small-RNA: reproduces cleanly</text>
+    <text x="24" y="60" font-size="13.5" fill="#4a5163">68 differential sncRNAs (paper 64), fold-change r = 1.000.</text>
+
+    <!-- class bars -->
+    <g transform="translate(24,80)" font-size="13">
+      <text x="0" y="14" fill="#1a1d29" font-weight="700">piRNA</text>
+      <rect x="86" y="2" width="238" height="16" rx="4" fill="#f0d9d3"/><rect x="86" y="2" width="231" height="16" rx="4" fill="#d64525"/>
+      <text x="334" y="15" fill="#4a5163">35 ↑</text>
+      <text x="0" y="42" fill="#1a1d29" font-weight="700">tRF</text>
+      <rect x="86" y="30" width="238" height="16" rx="4" fill="#f0d9d3"/><rect x="86" y="30" width="143" height="16" rx="4" fill="#d64525"/>
+      <text x="334" y="43" fill="#4a5163">21 ↑</text>
+      <text x="0" y="70" fill="#1a1d29" font-weight="700">miRNA</text>
+      <rect x="86" y="58" width="238" height="16" rx="4" fill="#dbe6f3"/><rect x="86" y="58" width="61" height="16" rx="4" fill="#2f6db5"/>
+      <text x="334" y="71" fill="#4a5163">9 mixed</text>
+      <text x="0" y="98" fill="#1a1d29" font-weight="700">snoRNA</text>
+      <rect x="86" y="86" width="238" height="16" rx="4" fill="#dbe6f3"/><rect x="86" y="86" width="20" height="16" rx="4" fill="#2f6db5"/>
+      <text x="334" y="99" fill="#4a5163">3 ↓</text>
+    </g>
+    <text x="24" y="212" font-size="13" fill="#7a8296">piRNAs and tRFs carry the up signal; miRNAs and snoRNAs the down signal.</text>
+  </g>
+
+  <!-- provenance -->
+  <line x1="40" y1="782" x2="1160" y2="782" stroke="#e3e6ef" stroke-width="1"/>
+  <text x="40" y="800" font-size="12.5" fill="#512feb" font-weight="700">GSE332551 reanalysis</text>
+  <text x="392" y="800" font-size="12" fill="#7a8296">source corrected_rnaseq_deseq2_all.csv · sha256 85cd5d635c3a05f8… · commit d85db38 · 2026-07-17</text>
+</svg>

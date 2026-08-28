@@ -1,0 +1,10 @@
+miRNA,mir_dir,mir_log2FC,n_targets,target_median_stat,expected,concordant,mwu_p
+hsa-miR-224-3p,down_in_AD,-3.61,106,0.188,targets up,True,0.026587017454923513
+hsa-miR-145-5p,down_in_AD,-2.29,206,0.089,targets up,True,0.04322717021886202
+hsa-miR-181a-3p,down_in_AD,-2.42,9,0.285,targets up,True,0.13790346491873073
+hsa-miR-362-5p,down_in_AD,-2.63,52,0.021,targets up,True,0.37439350726455545
+hsa-miR-361-3p,down_in_AD,-2.51,110,0.183,targets up,True,0.44588701262463953
+hsa-miR-4286,up_in_AD,2.9,98,-0.017,targets down,True,0.35717598984549864
+hsa-miR-20b-5p,up_in_AD,4.9,837,0.101,targets down,False,0.9950640955798986
+hsa-let-7b-5p,up_in_AD,2.62,1110,0.056,targets down,False,0.9989147251142632
+hsa-miR-7977,up_in_AD,2.78,594,0.181,targets down,False,0.9999969351506415
